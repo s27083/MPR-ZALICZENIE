@@ -94,8 +94,8 @@ public class UserServiceTest {
     @ValueSource(ints = { 1000, 2000, 3000 })
     void shouldGetUsersWithBalance(int balance) {
         // given
-        User user = new User(null, "Jan", "Kowalski", "1234", balance, Currency.PLN , "11111111111");
-        User user2 = new User(null, "Jan2", "Kowalski2", "1234", balance, Currency.PLN , "11111111112");
+        User user = new User(null, "Jan", "Kowalski", "1234", balance, Currency.PLN , "11111111411");
+        User user2 = new User(null, "Jan2", "Kowalski2", "1234", balance, Currency.PLN , "11141111112");
         User user3= new User(null, "Jan2", "Kowalski2", "1234", 20, Currency.PLN , "11111111112");
 
         User registeredUser = userService.registerUser(user);

@@ -26,6 +26,9 @@ public class UserService {
         if (!isValidPesel(user.getPesel())) {
             throw new InvalidPeselException(user.getPesel());
         }
+        if (userRepository.getAll().stream().anyMatch(u -> u.getPesel().equals(user.getPesel()))) {
+            throw new InvalidPeselException(user.getPesel());
+        }
         return userRepository.registerUser(user);
     }
 
