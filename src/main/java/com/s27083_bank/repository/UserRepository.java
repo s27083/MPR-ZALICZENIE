@@ -1,4 +1,4 @@
-package com.example.s27083_bank.repository;
+package com.s27083_bank.repository;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.stereotype.Repository;
 
-import com.example.s27083_bank.model.User;
+import com.s27083_bank.model.User;
 
 
 @Repository
@@ -15,6 +15,7 @@ public class UserRepository {
     List<User> users = new ArrayList<User>();
 
     public User registerUser(User user) {
+        user.setId(users.size() + 1);
         users.add(user);
         return user;
     }

@@ -1,4 +1,4 @@
-package com.example.s27083_bank;
+package com.s27083_bank;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
